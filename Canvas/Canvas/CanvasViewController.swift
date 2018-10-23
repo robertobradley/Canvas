@@ -9,7 +9,8 @@
 import UIKit
 
 class CanvasViewController: UIViewController {
-
+    @IBOutlet weak var viewTray: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
