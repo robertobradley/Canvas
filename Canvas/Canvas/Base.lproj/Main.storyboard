@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colorful-stripes-watercolor-paint-on-canvas-super-high-resolution-and-quality-background-michal-bednarek" translatesAutoresizingMaskIntoConstraints="NO" id="7zJ-fg-i6f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ad4-xl-lP7">
                                 <rect key="frame" x="16" y="412" width="343" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -69,23 +73,64 @@
                                             <outletCollection property="gestureRecognizers" destination="m1v-08-VB8" appends="YES" id="BoZ-xx-c8y"/>
                                         </connections>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="k2b-D6-r2G">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="up_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="k2b-D6-r2G">
                                         <rect key="frame" x="161" y="8" width="20" height="14"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Gug-Xr-EQd" appends="YES" id="f7p-uv-Sdx"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elx-eO-URc">
+                                <rect key="frame" x="61" y="20" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Artsy Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onArtsy:" destination="a1p-yw-l2S" eventType="touchUpInside" id="nsd-ug-PVT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-60-4U8">
+                                <rect key="frame" x="143" y="20" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Canvas Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCanvas:" destination="a1p-yw-l2S" eventType="touchUpInside" id="WQ6-cM-qDh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdA-q1-KnJ">
+                                <rect key="frame" x="239" y="20" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Clouds Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClouds:" destination="a1p-yw-l2S" eventType="touchUpInside" id="4Em-nN-BaW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7zI-o4-6sr"/>
                     </view>
                     <connections>
+                        <outlet property="backGround" destination="7zJ-fg-i6f" id="qJT-gR-b57"/>
+                        <outlet property="deadFace" destination="cBh-zN-eIM" id="eZ2-jF-okF"/>
+                        <outlet property="excitedFace" destination="jTP-ug-Ta8" id="fQN-AU-vxs"/>
+                        <outlet property="happyFace" destination="xP6-O7-aaa" id="kXx-nh-j7o"/>
+                        <outlet property="sadFace" destination="ocv-l9-kGb" id="a8c-bU-qXr"/>
+                        <outlet property="tongueFace" destination="gPs-Yn-b3e" id="Dpr-ql-QkE"/>
+                        <outlet property="trayArrow" destination="k2b-D6-r2G" id="27q-pr-cCX"/>
                         <outlet property="viewTray" destination="Ad4-xl-lP7" id="bLp-4R-bW1"/>
+                        <outlet property="winkFace" destination="Zc2-Se-P7I" id="emN-Qu-R8c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCW-SR-rjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -129,12 +174,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="colorful-stripes-watercolor-paint-on-canvas-super-high-resolution-and-quality-background-michal-bednarek" width="599" height="479"/>
         <image name="dead" width="60" height="60"/>
-        <image name="down_arrow" width="20" height="14"/>
         <image name="excited" width="60" height="60"/>
         <image name="happy" width="60" height="60"/>
         <image name="sad" width="60" height="60"/>
         <image name="tongue" width="60" height="60"/>
+        <image name="up_arrow" width="20" height="14"/>
         <image name="wink" width="60" height="60"/>
     </resources>
 </document>
